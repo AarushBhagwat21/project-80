@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Aarush Project 80</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Paragraph Maker</h1>
+        <span>
+        <p>Paragraph 1</p>
+        <span>1. </span>
+        <input type="text" id="para1_input_box_1">
+        <br><br>
+
+        <span>2. </span>
+        <input type="text" id="para1_input_box_2">
+        <br><br>
+
+        <span>3. </span>
+        <input type="text" id="para1_input_box_3">
+        <br><br>
+
+        <span>4. </span>
+        <input type="text" id="para1_input_box_4">
+        <br><br>
+
+        <span>5. </span>
+        <input type="text" id="para1_input_box_5">
+        <br><br>
+
+        <span>6. </span>
+        <input type="text" id="para1_input_box_6">
+        <br><br>
+        <button type="button" id="get_paragraph_1" onclick="get_para1()">Get Paragraph 1</button>
+        
+        </span>
+        <span>
+        <p>Paragraph 2</p>
+        <span>1. </span>
+        <input type="text" id="para2_input_box_1">
+        <br><br>
+
+        <span>2. </span>
+        <input type="text" id="para2_input_box_2">
+        <br><br>
+
+        <span>3. </span>
+        <input type="text" id="para2_input_box_3">
+        <br><br>
+
+        <span>4. </span>
+        <input type="text" id="para2_input_box_4">
+        <br><br>
+
+        <span>5. </span>
+        <input type="text" id="para2_input_box_5">
+        <br><br>
+
+        <span>6. </span>
+        <input type="text" id="para2_input_box_6">
+        <br><br>
+
+        <button type="button" id="get_paragraph_2" onclick="get_para2()">Get Paragraph 2</button>
+
+        </span>
+        <div>
+            <p id="paragraph_1"></p>
+        </div>
+        <div>
+            <p id="paragraph_2"></p>
+        </div>
+    
+    <script>
+        function get_para1(){
+            console.log("para_1");
+            var inputs_1=[];
+            for (var i=1; i<=6; i++)
+            {
+                console.log(document.getElementById("para1_input_box_"+i).value);
+                inputs_1.push(document.getElementById("para1_input_box_"+i).value);
+            }
+            inputs_1.join(". ");
+            document.getElementById("paragraph_1").innerHTML=inputs_1.join(". ");
+        }
+        function get_para2(){
+            var inputs_2=[]
+            console.log("para_2")
+            for (var i=1; i<=6; i++)
+            {
+                console.log(document.getElementById("para2_input_box_"+i).value)
+                inputs_2.push(document.getElementById("para2_input_box_"+i).value);
+            }
+            inputs_2.join(". ");
+            document.getElementById("paragraph_2").innerHTML=inputs_2.join(". ");
+        }
+    </script>
+    </body>
+</html>
